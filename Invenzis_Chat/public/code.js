@@ -16,9 +16,9 @@
     });*/
 
   app
-    .querySelector(".chat-screen #send-message")
-    .addEventListener("click", function() {
+    .querySelector(".chat-screen #send-message").addEventListener("click", function() {
       let message = app.querySelector(".chat-screen #message-input").value;
+      console.log(message);
       if (message.length == 0) {
         return;
       }
@@ -39,22 +39,22 @@
     if (type == "my") {
       let el = document.createElement("div");
       el.setAttribute("class", "message my-message");
-      el.innerHTML = (
+      el.innerHTML = `
         <div>
           <div class="name">You</div>
           <div class="text">${message.text}</div>
         </div>
-      );
+      `;
       messageContainer.appendChild(e1);
     } else if (type == "other") {
         let el = document.createElement("div");
         el.setAttribute("class", "message other-message");
-        el.innerHTML = (
+        el.innerHTML = `
           <div>
             <div class="name">Invenzis</div>
             <div class="text">${message.text}</div>
           </div>
-        );
+        `;
         messageContainer.appendChild(e1);
     } else if (type == "update") {
         let el = document.createElement("div");
