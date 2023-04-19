@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invenzis ChatGPT</title>
+    <link rel="stylesheet" type = "text/css" href="styles.css">
+
+    <!--Font Awesome-->
+
+    <script src="https://kit.fontawesome.com/940eccd709.js"
+      crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Prueba local host 5000-->
+
+    <div class="app">
+        <div class = "screen join-screen">
+            <div class="form">
+                <h2>Hacer una pregunta</h2>
+                <div class="form-input">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Unirse al chat</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen active">
+            <div class="header">
+                <!-- Agregar imagen de logo invenzis -->
+                <div class="logo">Invenzis</div>
+                <button id="exit-chat">X</button>
+            </div>
+            <div class="messages">
+                <div class="message my-message">
+                    <div>
+                        <div class="name">Yo</div>
+                        <div class="text">Prueba Envio</div>
+                    </div>
+                </div>
+                <div class="message update">
+                    Invenzis se unió a la conversación
+                </div>
+                <div class="message other-message">
+                    <div>
+                        <div class="name">Invenzis</div>
+                        <div class="text">Prueba Respuesta</div>
+                    </div>
+                </div>
+            </div>
+            <div class="typebox">
+                <input type="text" id="message-input">
+                <button id="send-message"><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script type = "text/javascript" src="socket.io/socket.io.js"></script>
+    <script type = "text/javascript" src="code.js"></script>
+</body>
+</html>
